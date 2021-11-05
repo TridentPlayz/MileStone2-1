@@ -13,53 +13,57 @@ namespace MileStone2
     {
 
 
-        int id;
-        string surname;
-        string name;
+        int modulecode;
+        string modulename;
+        string moduledescription;
+        string moduleresource;
 
         SqlConnection conn = new SqlConnection("Server=.;Initial Catalog=Petshop;Integrated security=SSPI");
         public DataHandler() { }
 
-        public DataHandler(int id, string name, string surname)
+        public DataHandler(int modulecode, string modulename, string moduledescription, string moduleresource)
         {
-            this.id = id;
-            this.name = name;
-            this.surname = surname;
+            this.modulecode = modulecode;
+            this.modulename = modulename;
+            this.moduledescription = moduledescription;
+            this.moduleresource = moduleresource;
         }
 
-        public DataHandler(int id, string name)
+        public DataHandler(int modulecode, string modulename, string moduledescription)
         {
-            this.id = id;
-            this.name = name;
+            this.modulecode = modulecode;
+            this.modulename = modulename;
+            this.moduledescription = moduledescription;
         }
-        public void updateName(int id_, string name_)
+        public void updateName(int modulecode_, string modulename_)
         {
             conn.Open();
             SqlCommand cmd = new SqlCommand("up1valname", conn);
-            cmd.Parameters.AddWithValue("@id", id_);
-            cmd.Parameters.AddWithValue("@name", name_);
+            cmd.Parameters.AddWithValue("@id", modulecode_);
+            cmd.Parameters.AddWithValue("@name", modulename_);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.ExecuteNonQuery();
             conn.Close();
         }
 
-        public void updateSurname(int id_, string Surname_)
+        public void updateSurname(int modulecode_, string moduledescription_)
         {
             conn.Open();
             SqlCommand cmd = new SqlCommand("up1valSurname", conn);
-            cmd.Parameters.AddWithValue("@id", id_);
-            cmd.Parameters.AddWithValue("@surname", Surname_);
+            cmd.Parameters.AddWithValue("@id", modulecode_);
+            cmd.Parameters.AddWithValue("@surname", moduledescription_);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.ExecuteNonQuery();
             conn.Close();
         }
-        public void updateAll(int id_, string name_, string Surname_)
+        public void updateAll(int modulecode_, string modulename_, string moduledescription_, string moduleresource_)
         {
             conn.Open();
             SqlCommand cmd = new SqlCommand("up1valall", conn);
-            cmd.Parameters.AddWithValue("@id", id_);
-            cmd.Parameters.AddWithValue("@name", name_);
-            cmd.Parameters.AddWithValue("@surname", Surname_);
+            cmd.Parameters.AddWithValue("@id", modulecode_);
+            cmd.Parameters.AddWithValue("@name", modulename_);
+            cmd.Parameters.AddWithValue("@surname", moduledescription_);
+            cmd.Parameters.AddWithValue("@surname", moduleresource_);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.ExecuteNonQuery();
             conn.Close();

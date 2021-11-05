@@ -36,13 +36,13 @@ namespace MileStone2
             this.button7 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtmodulecodeadd = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtmodulenameadd = new System.Windows.Forms.TextBox();
+            this.txtmoduledesadd = new System.Windows.Forms.TextBox();
+            this.txtmoduleresadd = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
@@ -50,10 +50,10 @@ namespace MileStone2
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txtmodulecodedel = new System.Windows.Forms.TextBox();
+            this.txtmodulenamedel = new System.Windows.Forms.TextBox();
+            this.txtmoduledesdel = new System.Windows.Forms.TextBox();
+            this.txtmodulereddel = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
@@ -121,13 +121,13 @@ namespace MileStone2
             this.label2.TabIndex = 62;
             this.label2.Text = "Module Code";
             // 
-            // textBox1
+            // txtmodulecodeadd
             // 
-            this.textBox1.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(162, 108);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(124, 22);
-            this.textBox1.TabIndex = 63;
+            this.txtmodulecodeadd.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtmodulecodeadd.Location = new System.Drawing.Point(162, 108);
+            this.txtmodulecodeadd.Name = "txtmodulecodeadd";
+            this.txtmodulecodeadd.Size = new System.Drawing.Size(124, 22);
+            this.txtmodulecodeadd.TabIndex = 63;
             // 
             // label1
             // 
@@ -159,29 +159,29 @@ namespace MileStone2
             this.label6.TabIndex = 66;
             this.label6.Text = "Module Resource Links";
             // 
-            // textBox2
+            // txtmodulenameadd
             // 
-            this.textBox2.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(162, 216);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(124, 22);
-            this.textBox2.TabIndex = 67;
+            this.txtmodulenameadd.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtmodulenameadd.Location = new System.Drawing.Point(162, 216);
+            this.txtmodulenameadd.Name = "txtmodulenameadd";
+            this.txtmodulenameadd.Size = new System.Drawing.Size(124, 22);
+            this.txtmodulenameadd.TabIndex = 67;
             // 
-            // textBox3
+            // txtmoduledesadd
             // 
-            this.textBox3.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(162, 324);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(124, 22);
-            this.textBox3.TabIndex = 68;
+            this.txtmoduledesadd.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtmoduledesadd.Location = new System.Drawing.Point(162, 324);
+            this.txtmoduledesadd.Name = "txtmoduledesadd";
+            this.txtmoduledesadd.Size = new System.Drawing.Size(124, 22);
+            this.txtmoduledesadd.TabIndex = 68;
             // 
-            // textBox4
+            // txtmoduleresadd
             // 
-            this.textBox4.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(162, 432);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(124, 22);
-            this.textBox4.TabIndex = 69;
+            this.txtmoduleresadd.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtmoduleresadd.Location = new System.Drawing.Point(162, 432);
+            this.txtmoduleresadd.Name = "txtmoduleresadd";
+            this.txtmoduleresadd.Size = new System.Drawing.Size(124, 22);
+            this.txtmoduleresadd.TabIndex = 69;
             // 
             // button3
             // 
@@ -254,37 +254,37 @@ namespace MileStone2
             this.label10.TabIndex = 76;
             this.label10.Text = "Module Resource Links";
             // 
-            // textBox5
+            // txtmodulecodedel
             // 
-            this.textBox5.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(998, 108);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(124, 22);
-            this.textBox5.TabIndex = 77;
+            this.txtmodulecodedel.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtmodulecodedel.Location = new System.Drawing.Point(998, 108);
+            this.txtmodulecodedel.Name = "txtmodulecodedel";
+            this.txtmodulecodedel.Size = new System.Drawing.Size(124, 22);
+            this.txtmodulecodedel.TabIndex = 77;
             // 
-            // textBox6
+            // txtmodulenamedel
             // 
-            this.textBox6.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(998, 216);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(124, 22);
-            this.textBox6.TabIndex = 78;
+            this.txtmodulenamedel.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtmodulenamedel.Location = new System.Drawing.Point(998, 216);
+            this.txtmodulenamedel.Name = "txtmodulenamedel";
+            this.txtmodulenamedel.Size = new System.Drawing.Size(124, 22);
+            this.txtmodulenamedel.TabIndex = 78;
             // 
-            // textBox7
+            // txtmoduledesdel
             // 
-            this.textBox7.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(998, 324);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(124, 22);
-            this.textBox7.TabIndex = 79;
+            this.txtmoduledesdel.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtmoduledesdel.Location = new System.Drawing.Point(998, 324);
+            this.txtmoduledesdel.Name = "txtmoduledesdel";
+            this.txtmoduledesdel.Size = new System.Drawing.Size(124, 22);
+            this.txtmoduledesdel.TabIndex = 79;
             // 
-            // textBox8
+            // txtmodulereddel
             // 
-            this.textBox8.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(998, 432);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(124, 22);
-            this.textBox8.TabIndex = 80;
+            this.txtmodulereddel.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtmodulereddel.Location = new System.Drawing.Point(998, 432);
+            this.txtmodulereddel.Name = "txtmodulereddel";
+            this.txtmodulereddel.Size = new System.Drawing.Size(124, 22);
+            this.txtmodulereddel.TabIndex = 80;
             // 
             // button5
             // 
@@ -324,10 +324,10 @@ namespace MileStone2
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.txtmodulereddel);
+            this.Controls.Add(this.txtmoduledesdel);
+            this.Controls.Add(this.txtmodulenamedel);
+            this.Controls.Add(this.txtmodulecodedel);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -335,13 +335,13 @@ namespace MileStone2
             this.Controls.Add(this.label22);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtmoduleresadd);
+            this.Controls.Add(this.txtmoduledesadd);
+            this.Controls.Add(this.txtmodulenameadd);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtmodulecodeadd);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button7);
@@ -369,13 +369,13 @@ namespace MileStone2
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtmodulecodeadd;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtmodulenameadd;
+        private System.Windows.Forms.TextBox txtmoduledesadd;
+        private System.Windows.Forms.TextBox txtmoduleresadd;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label22;
@@ -383,10 +383,10 @@ namespace MileStone2
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txtmodulecodedel;
+        private System.Windows.Forms.TextBox txtmodulenamedel;
+        private System.Windows.Forms.TextBox txtmoduledesdel;
+        private System.Windows.Forms.TextBox txtmodulereddel;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.ListBox listBox1;

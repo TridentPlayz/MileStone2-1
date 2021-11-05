@@ -12,6 +12,8 @@ namespace MileStone2
 {
     public partial class ModuleRecords : Form
     {
+        DataHandler dh = new DataHandler();
+
         public ModuleRecords()
         {
             InitializeComponent();
@@ -32,11 +34,11 @@ namespace MileStone2
         private void button3_Click(object sender, EventArgs e)
         {
             Users u = new Users();
-            u.InsertUser(txtGender.Text, txtIdNumber.Text, txtName.Text, txtSurname.Text);
-            txtName.Text = "";
-            txtSurname.Text = "";
-            txtGender.Text = "";
-            txtIdNumber.Text = "";
+            u.InsertUser(txtmodulecodeadd.Text, txtmodulenameadd.Text, txtmoduledesadd.Text, txtmoduleresadd.Text);
+            txtmodulecodeadd.Text = "";
+            txtmodulenameadd.Text = "";
+            txtmoduledesadd.Text = "";
+            txtmoduleresadd.Text = "";
         }
 
         private void ModuleRecords_Load(object sender, EventArgs e)
@@ -58,7 +60,7 @@ namespace MileStone2
                 DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
                 word = Convert.ToInt32(row.Cells["userId"].Value.ToString());
 
-                Pet p = new Pet();
+                mod p = new mod();
                 foreach (var item in p.GetPets(word))
                 {
                     listBox1.Items.Add($"Name: {item.Name}      Type: {item.PetType} Age: {item.Age}");
@@ -71,32 +73,32 @@ namespace MileStone2
         private void button6_Click(object sender, EventArgs e)
         {
             Users u = new Users();
-            MessageBox.Show(u.DeleteData(txtIdNumber.Text));
-            txtName.Text = "";
-            txtSurname.Text = "";
-            txtGender.Text = "";
-            txtIdNumber.Text = "";
+            MessageBox.Show(u.DeleteData(txtmodulecodedel.Text));
+            txtmodulecodedel.Text = "";
+            txtmodulenamedel.Text = "";
+            txtmoduledesdel.Text = "";
+            txtmodulereddel.Text = "";
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             DataHandler dh = new DataHandler();
-            txtName.Text = "";
-            txtSurname.Text = "";
-            txtGender.Text = "";
-            txtIdNumber.Text = "";
-            if (txtIdNumber.Text != "" && txtName.Text != "")
+            txtmodulecodedel.Text = "";
+            txtmodulenamedel.Text = "";
+            txtmoduledesdel.Text = "";
+            txtmodulereddel.Text = "";
+            if (txtmodulecodedel.Text != "" && txtmodulenamedel.Text != "")
             {
-                dh.updateName(Convert.ToInt32(txtIdNumber.Text), txtName.Text);
+                dh.updateName(Convert.ToInt32(txtmodulecodedel.Text), txtmodulenamedel.Text);
 
             }
-            else if (txtIdNumber.Text != "" && txtSurname.Text != "")
+            else if (txtmodulecodedel.Text != "" && txtmoduledesdel.Text != "")
             {
-                dh.updateSurname(Convert.ToInt32(txtIdNumber.Text), txtSurname.Text);
+                dh.updateSurname(Convert.ToInt32(txtmodulecodedel.Text), txtmoduledesdel.Text);
             }
-            else if (txtIdNumber.Text != "" && txtSurname.Text != "" && txtName.Text != "")
+            else if (txtmodulecodedel.Text != "" && txtmoduledesdel.Text != "" && txtmodulecodedel.Text != "")
             {
-                dh.updateAll(Convert.ToInt32(txtIdNumber.Text), txtName.Text, txtSurname.Text);
+                dh.updateAll(Convert.ToInt32(txtmodulecodedel.Text), txtmodulecodedel.Text, txtmoduledesdel.Text);
             }
         }
     }
