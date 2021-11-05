@@ -413,7 +413,7 @@ namespace MileStone2
             this.gpbADDandDELETE.Size = new System.Drawing.Size(312, 494);
             this.gpbADDandDELETE.TabIndex = 63;
             this.gpbADDandDELETE.TabStop = false;
-            this.gpbADDandDELETE.Text = "ADD or DELETE RECORDS";
+            this.gpbADDandDELETE.Text = "UPDATE or DELETE RECORDS";
             // 
             // btnUpload
             // 
