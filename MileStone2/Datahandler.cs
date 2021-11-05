@@ -18,7 +18,7 @@ namespace MileStone2
         string moduledescription;
         string moduleresource;
 
-        SqlConnection conn = new SqlConnection("Server=.;Initial Catalog=Petshop;Integrated security=SSPI");
+        SqlConnection conn = new SqlConnection("Server=.;Initial Catalog=StudentInformationMilestone1;Integrated security=SSPI");
         public DataHandler() { }
 
         public DataHandler(int modulecode, string modulename, string moduledescription, string moduleresource)
@@ -73,7 +73,7 @@ namespace MileStone2
         {
             try
             {
-                SqlConnection con = new SqlConnection("Server=.;Initial Catalog=Petshop;Integrated security=SSPI");
+                SqlConnection con = new SqlConnection("Server=.;Initial Catalog=StudentInformationMilestone1;Integrated security=SSPI");
 
             }
             catch (Exception)
@@ -104,17 +104,22 @@ namespace MileStone2
             }
         }
 
-        public void InsertData(string name, string surname, string idNumber, string gender)
+        internal void updateAll(int v, string text1, string text2)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void InsertData(int modulecode, string modulename, string moduledescription, string moduleresource)
         {
             try
             {
                 conn.Open();
                 SqlCommand cmd = new SqlCommand("Inserted", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@name", name);
-                cmd.Parameters.AddWithValue("@surname", surname);
-                cmd.Parameters.AddWithValue("@gender", gender);
-                cmd.Parameters.AddWithValue("@IDNumber", idNumber);
+                cmd.Parameters.AddWithValue("@name", modulename);
+                cmd.Parameters.AddWithValue("@surname", moduledescription);
+                cmd.Parameters.AddWithValue("@gender", moduleresource);
+                cmd.Parameters.AddWithValue("@IDNumber", modulecode);
                 cmd.ExecuteNonQuery();
                 conn.Close();
             }
@@ -125,13 +130,13 @@ namespace MileStone2
             }
         }
 
-        public DataTable ReadUserPet(int number)
+        public DataTable ReadUsermod(int number)
         {
             DataTable tb = new DataTable();
             try
             {
                 conn.Open();
-                SqlCommand cmd = new SqlCommand("readPet", conn);
+                SqlCommand cmd = new SqlCommand("readmod", conn);
                 cmd.Parameters.AddWithValue("ids", number);
                 cmd.CommandType = CommandType.StoredProcedure;
                 SqlDataAdapter SDA = new SqlDataAdapter();
@@ -168,15 +173,15 @@ namespace MileStone2
             }
         }
 
-        public void StorePet(string name, string type, int age) //, int userid
+        public void Storemod(int modulecode, string modulename, string moduledescription, string moduleresource) //, int userid
         {
             try
             {
                 conn.Open();
-                SqlCommand cmd = new SqlCommand("insertPet", conn);
-                cmd.Parameters.AddWithValue("@name", name);
-                cmd.Parameters.AddWithValue("@type", type);
-                cmd.Parameters.AddWithValue("@age", age);
+                SqlCommand cmd = new SqlCommand("insertmod", conn);
+                cmd.Parameters.AddWithValue("@name", modulename);
+                cmd.Parameters.AddWithValue("@type", moduledescription);
+                cmd.Parameters.AddWithValue("@age", moduleresource);
                 // cmd.Parameters.AddWithValue("@user", userid);
                 conn.Close();
                 MessageBox.Show("record inserted");

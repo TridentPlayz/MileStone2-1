@@ -31,43 +31,43 @@ namespace MileStone2
 }
 class mod
 {
-    int age;
-    int petID;
-    string name;
-    string petType;
+    int modulecode;
+    string modulename;
+    string moduledes;
+    string moduleres;
 
     public mod() { }
 
-    public mod(int age, int petID, string name, string petType)
+    public mod(int modulecode, string modulename, string moduledes, string moduleres)
     {
-        this.Age = age;
-        this.PetID = petID;
-        this.Name = name;
-        this.PetType = petType;
+        this.modulecode = modulecode;
+        this.modulename = modulename;
+        this.moduledes = moduledes;
+        this.moduleres = moduleres;
     }
 
-    public int Age { get => age; set => age = value; }
-    public int PetID { get => petID; set => petID = value; }
-    public string Name { get => name; set => name = value; }
-    public string PetType { get => petType; set => petType = value; }
+    public int Modulecode { get => modulecode; set => modulecode = value; }
+    public string Modulename { get => modulename; set => modulename = value; }
+    public string Moduledes { get => moduledes; set => moduledes = value; }
+    public string Moduleres { get => moduleres; set => moduleres = value; }
 
     public List<mod> GetPets(int number)
     {
-        List<mod> myPets = new List<mod>();
+        List<mod> myMods = new List<mod>();
         try
         {
             DataHandler dh = new DataHandler();
-            foreach (DataRow item in dh.ReadUserPet(number).Rows)
+            foreach (DataRow item in dh.ReadUsermod(number).Rows)
             {
-                mod p = new mod(Convert.ToInt32(item[3].ToString()), Convert.ToInt32(item[0].ToString()), item[1].ToString(), item[2].ToString());
-                myPets.Add(p);
+                mod p = new mod(Convert.ToInt32(item[3].ToString()), (item[0].ToString()), item[1].ToString(), item[2].ToString());
+                myMods.Add(p);
             }
-            return myPets;
+            return myMods;
         }
         catch (Exception ex)
         {
             MessageBox.Show(ex.Message);
-            return myPets;
+            return myMods;
 
         }
     }
